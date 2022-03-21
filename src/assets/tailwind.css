@@ -92,7 +92,7 @@
   }
 
   .movie-card__content__title {
-    @apply font-semibold text-slate-800 h-10 text-center;
+    @apply font-semibold text-slate-800 h-10 text-center flex items-center justify-center gap-1
   }
 
   .movie-card__content__description {

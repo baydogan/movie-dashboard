@@ -1,6 +1,5 @@
 import { createStore } from "vuex";
 
-
 //favorileri tutmak için state
 export default createStore({
   state: {
@@ -8,10 +7,11 @@ export default createStore({
   },
   mutations: {
     addFavorite(state, movie) {
+      //favori filmi eklemek için mutation
       state.favorites.push(movie);
     },
     removeFavorite(state, movie) {
-      state.favorites = state.favorites.filter((favorite) => favorite.id !== movie.id);
+      state.favorites = state.favorites.filter((favorite) => favorite.id !== movie.id); //favorileri kaldırmak için mutation
     },
   },
   actions: {
