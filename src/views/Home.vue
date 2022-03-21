@@ -2,7 +2,7 @@
   <spinner v-if="loading" />
   <error-message v-if="error" :error="error" />
   <div class="movie-list-wrapper">
-    <h2 class="home-title">Popular Movies</h2>
+    <h2 v-if="!loading" class="home-title">Popular Movies</h2>
     <div class="movie-list">
       <movie-card v-for="movie in popularMovies.results" :key="movie.id" :movie="movie" />
     </div>

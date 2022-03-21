@@ -156,4 +156,8 @@
   .card-remove-favorite {
     @apply p-3 bg-red-600 shadow-lg text-white hover:bg-red-800 transition-all duration-300 rounded-full text-sm w-36;
   }
+
+  .error-message  {
+    @apply flex items-center bg-red-500 text-white text-sm font-bold px-4 py-3;
+  }
 }
