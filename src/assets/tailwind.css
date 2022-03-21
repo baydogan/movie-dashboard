@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @layer base {
+    html {
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  body {
+    @apply bg-gray-50;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+@layer components {
+  nav {
+    @apply bg-gray-100 border-gray-200 px-4 md:py-4 sm:px-4 py-2.5 rounded-b-sm;
+  }
+
+  .home-title {
+    @apply text-center md:text-left text-3xl mb-10 text-slate-700;
+  }
+
+  .movie-list {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5;
+  }
+
+  .movie-list-wrapper {
+    @apply container mx-auto py-6;
+  }
+
+  .nav-container {
+    @apply container flex flex-wrap justify-between items-center mx-auto;
+  }
+
+  .logo {
+    @apply self-center text-xl md:text-3xl font-normal whitespace-nowrap text-slate-800 shadow-inherit;
+  }
+
+  .hamburger-btn {
+    @apply inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200;
+  }
+
+  .mobile-nav-btn {
+    @apply inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200;
+  }
+
+  .desktop-btn-group {
+    @apply hidden w-full md:block md:w-auto;
+  }
+  .desktop-btn-group ul {
+    @apply flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium;
+  }
+
+  .desktop-btn {
+    @apply block py-2 pr-4 pl-3 text-slate-900 p-5    md:py-2 md:px-3 md:text-lg;
+  }
+
+  .search-box {
+    @apply flex flex-col items-center justify-center w-full md:w-auto md:relative;
+  }
+
+  .search-box input {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl block  pl-10 px-6 md:px-20  p-3 shadow-lg;
+  }
+
+  .movie-card-wrapper {
+    @apply flex justify-center items-center;
+  }
+
+  .movie-card-container {
+    @apply max-w-sm h-card-height rounded overflow-hidden shadow-lg;
+  }
+
+  .movie-card__poster {
+    @apply w-full h-poster-height;
+  }
+
+  .movie-card__vote_section {
+    @apply absolute bg-transparent opacity-60 w-20 text-center rounded-br-lg bg-slate-200 font-semibold p-3;
+  }
+
+  .movie-card__content {
+    @apply flex justify-around py-3;
+  }
+
+  .movie-card__content__title {
+    @apply font-semibold text-slate-800 h-10 text-center;
+  }
+
+  .movie-card__content__description {
+    @apply text-slate-800 tracking-wider h-64;
+  }
+
+  .movie-card__content__buttons {
+    @apply p-3 bg-cyan-600 text-white rounded-full shadow-md text-sm w-36;
+  }
+
+  .detailed-card-container {
+    @apply flex flex-col md:flex-row overflow-hidden
+    bg-white rounded-lg shadow-xl  mt-4 max-w-6xl mx-2;
+  }
+  .detailed-card-poster {
+    @apply w-full h-poster-height;
+  }
+  .detailed-card-content {
+    @apply flex flex-col md:flex-row;
+  }
+  .dropdown-menu {
+    @apply absolute mt-5  rounded w-56 md:w-96 z-50 bg-gray-100 p-2 md:p-4;
+  }
+
+  .dropdown-menu__title {
+    @apply text-slate-800 text-base font-semibold;
+  }
+
+  .dropdown-menu__item {
+    @apply flex items-center gap-2 my-3;
+  }
+  .detailed-card-content__container {
+    @apply container max-w-xs md:max-w-4xl flex justify-center flex-col md:flex-row mx-auto mt-20 gap-4;
+  }
+  .detailed-card-content__title {
+    @apply text-2xl w-full font-semibold;
+  }
+  .detailed-card-content__description {
+    @apply text-base tracking-wide;
+  }
+  .detailed-card-content__buttons {
+    @apply p-3 bg-cyan-600 text-white rounded-full shadow-md text-sm;
+  }
+
+  .detailed-card-description__container {
+    @apply flex flex-col md:flex-row items-baseline gap-4;
+  }
+
+  .dropdown-menu__item__title {
+    @apply text-sm tracking-wide;
+  }
+
+  .detailed-card-posters {
+    @apply object-contain max-w-sm rounded-sm shadow-lg;
+  }
+
+  .card-add-favorite {
+    @apply p-3 bg-lime-600 shadow-lg text-white hover:bg-lime-800 transition-all duration-300 rounded-full text-sm w-36;
+  }
+
+  .card-remove-favorite {
+    @apply p-3 bg-red-600 shadow-lg text-white hover:bg-red-800 transition-all duration-300 rounded-full text-sm w-36;
+  }
+}
