@@ -3,7 +3,7 @@ import { createStore } from "vuex";
 //favorileri tutmak için state
 export default createStore({
   state: {
-    favorites: [],
+    favorites: []
   },
   mutations: {
     addFavorite(state, movie) {
